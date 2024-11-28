@@ -1,0 +1,21 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import RefundPolicyConfig from "../config/main-config.json"
+const RefundPolicyData = RefundPolicyConfig.refundPolicy[0];
+import "../../public/style/style.css"
+---
+
+<Layout>
+	<div class="refund_policy">
+		<h2 class="refund_policy_title">{RefundPolicyData.subtitle}</h2>
+		<div class="refund_policy_text">
+			<p>{RefundPolicyData.lastRevision}</p>
+			<p>{RefundPolicyData.ourProduct}</p>
+			<ol>
+				{RefundPolicyData.numbers.map(item => (
+					<li>{item.item}</li>
+				))}
+			</ol>
+		</div>
+	</div>
+</Layout>

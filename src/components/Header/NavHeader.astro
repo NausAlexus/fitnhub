@@ -1,0 +1,24 @@
+---
+import navConfig from "../../config/nav-config.json";
+import "../../../public/style/style.css"
+const pathName = new URL(Astro.request.url).pathname;
+const currentPath = pathName.split("/fitnhub/").filter(Boolean)[0];
+---
+
+<nav class="nav-container">
+	<ul class="nav-items">
+		{
+			navConfig.links.map((item) => (
+				<li class="nav-item">
+					<a
+						class="nav-link"
+						href={item.path}
+						class:list={{ active: currentPath === item.path.replace("/fitnhub/", "") }}
+					>
+						{item.name}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>

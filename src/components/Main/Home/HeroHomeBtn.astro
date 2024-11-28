@@ -1,0 +1,7 @@
+---
+import homeConfig from "../../../config/main-config.json";
+const heroData = homeConfig.heroHome[0];
+import "../../../../public/style/style.css"
+---
+
+<a href={heroData.link} class="m-l-80px hero-home-btn-link">{heroData.buttonText}</a>

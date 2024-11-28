@@ -1,0 +1,15 @@
+---
+import PlanHomeWidget1 from "./PlanHomeWidget-1.astro"
+import PlanHomeWidget2 from "./PlanHomeWidget-2.astro"
+import planHomeConfig from "../../../config/main-config.json"
+const planHomeData = planHomeConfig.planHome[0];
+import "../../../../public/style/style.css"
+---
+
+<div class="plan-home-container">
+    <h2 class="plan-home-title">{planHomeData["title-1"]}</h2>
+    <PlanHomeWidget1/>
+    <img class="plan-home-text" src="/fitnhub/img/home_img/women-home-img.svg" alt="Women">
+    <h2 class="plan-home-title">{planHomeData["title-2"]}</h2>
+    <PlanHomeWidget2/>
+</div>

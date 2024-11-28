@@ -1,0 +1,26 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import termOfUseConfig from "../config/main-config.json"
+const termOfUseData = termOfUseConfig.termsOfUse[0];
+import "../../public/style/style.css"
+---
+
+<Layout>
+  <div class="terms_of_use">
+    <h2 class="terms_of_use_title">{termOfUseConfig.termsOfUse[0].subtitle}</h2>
+    <div class="terms_of_use_text">
+      <p>{termOfUseConfig.termsOfUse[0].lastRevision}</p>
+      <p>{termOfUseConfig.termsOfUse[0].ourProduct}</p>
+      <ol>
+        {termOfUseData.numbers.map(item => (
+          <li>{item.item.split('\n').map(line => (
+            <span>
+                {line}
+                <br />
+            </span>
+        ))}</li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</Layout>

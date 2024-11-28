@@ -1,0 +1,16 @@
+---
+import PriceDemoWidget from "./PriceDemoWidget.astro"
+import PriceMonthlyWidget from "./PriceMonthlyWidget.astro"
+import priceHomeConfig from "../../../config/main-config.json"
+const priceHomeData = priceHomeConfig.priceHome[0];
+import "../../../../public/style/style.css"
+---
+
+<div class="price-home-container">
+    <h2 class="price-home-title">{priceHomeData.title}</h2>
+    <div class="price-widget-container">
+        <PriceDemoWidget/>
+        <PriceMonthlyWidget/>
+    </div>
+    <img class="price-home-img" src="/fitnhub/img/home_img/price-home-img.svg" alt="Price">
+</div>

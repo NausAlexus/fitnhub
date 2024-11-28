@@ -1,0 +1,14 @@
+---
+import footerConfig from "../../config/footer-config.json"
+const blogFooterData = footerConfig.blogFooter[0];
+import "../../../public/style/style.css"
+---
+
+<div class="blog-footer-container">
+    <p class="blog-footer-title">{blogFooterData.subtitle}</p>
+    <ul class="blog-footer-items">
+        {blogFooterData.links.map(item => (
+            <li class="blog-footer-item"><a class="blog-footer-link" href={item.path}>{item.name}</a></li>
+        ))}
+    </ul>
+</div>

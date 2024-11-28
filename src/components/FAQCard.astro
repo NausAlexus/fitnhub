@@ -1,0 +1,15 @@
+---
+import FAQConfig from "../config/main-config.json"
+import "../../public/style/style.css"
+---
+
+<div class="pricing_card">
+	<ol class="pricing_card_question">
+		{FAQConfig.FAQCard.map(faq => (
+			<li>
+				<p class="pricing_card_question_title">{faq.subtitle}</p>
+				<p class="pricing_card_question_text">{faq.description}</p>
+			</li>
+		))}
+	</ol>
+</div>

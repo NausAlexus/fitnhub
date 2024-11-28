@@ -1,0 +1,18 @@
+---
+import Logo from "./Logo.astro";
+import ButtonHeader from "./ButtonHeader.astro";
+import NavHeader from "./NavHeader.astro";
+import ButtonMobileHeader from "./ButtonMobileHeader.astro";
+import "../../../public/style/style.css"
+---
+
+<header class="header">
+	<div class="header-container">
+		<a class="header-logo" href="/fitnhub/"><Logo /></a>
+		<NavHeader />
+		<div class="header-button">
+			<ButtonHeader />
+			<ButtonMobileHeader />
+		</div>
+	</div>
+</header>

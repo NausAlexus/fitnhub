@@ -1,0 +1,14 @@
+---
+import planHomeConfig from "../../../config/main-config.json";
+const planHomeData = planHomeConfig.planHome[0];
+import "../../../../public/style/style.css"
+---
+
+<div class="plan-home-widget-2-container">
+    {planHomeData.planHomeWidget2.map((widget) => (
+        <div class="plan-home-widget-item">
+            <h3 class="plan-home-widget-2-title">{widget.subtitle}</h3>
+            <p class="plan-home-widget-2-text">{widget.description}</p>
+        </div>
+    ))}
+</div>

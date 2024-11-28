@@ -1,0 +1,12 @@
+---
+import ReadMoreBtn from "./ReadMoreBtn.astro";
+import CardFitnessConfig from "../../../config/main-config.json"
+import "../../../../public/style/style.css"
+---
+
+<div class="card-fitness">
+	<img class="BlogFitnessImg" src="/fitnhub/img/blog_img/Fitnes.jpg" alt="Fitness" />
+	<p class="card-fitness_title">{CardFitnessConfig.cardFitness[0].subtitle}</p>
+	<p class="card-fitness_text">{CardFitnessConfig.cardFitness[0].description}</p>
+	<a class="card-fitness-link" href={CardFitnessConfig.cardFitness[0].path}>  <ReadMoreBtn /></a>
+</div>

@@ -1,0 +1,10 @@
+---
+import navConfig from "../../config/nav-config.json"
+import "../../../public/style/style.css"
+---
+
+{navConfig.buttons.map(button => (
+    <button class="button-header" type="button">
+        {button.name}
+    </button>
+))}

@@ -1,0 +1,32 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import ReturnToBlog from "../components/Main/Blog/ReturnToBlog.astro";
+import NutritionEssentialsConfig from "../config/main-config.json"
+import "../../public/style/style.css"
+---
+
+<Layout>
+  <div class="nutrition-essentials-container">
+    <div class="nutrition-essentials">
+      <p class="nutrition-essentials-title">{NutritionEssentialsConfig.nutritionEssentials[0].subtitle}</p>
+      <div class="nutrition-essentials-block">
+        <div class="nutrition-essentials-content">
+          <p class="nutrition-essentials-text">
+            {NutritionEssentialsConfig.nutritionEssentials[0].description.split('\n').map(line => (
+                <span>
+                    {line}
+                    <br />
+                </span>
+            ))}
+          </p>
+          <ReturnToBlog />
+        </div>
+        <img
+          class="NutritionEssentialsImg"
+          src="/fitnhub/img/blog_img/Fitnes.jpg"
+          alt="Mindful Mornings"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>

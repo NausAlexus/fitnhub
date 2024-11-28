@@ -1,0 +1,13 @@
+---
+import HeroHomeBtn from "./HeroHomeBtn.astro";
+import homeConfig from "../../../config/main-config.json";
+const heroData = homeConfig.heroHome[0];
+import "../../../../public/style/style.css"
+---
+
+<div class="hero-home-container">
+    <h2 class="m-l-80 hero-home-title">{heroData.title}</h2>
+    <p class="m-l-80 hero-home-text">{heroData.text}</p>
+    <HeroHomeBtn/>
+    <img class="hero-home-img" src="/fitnhub/img/home_img/hero-home-img.svg" alt="Hero img">
+</div>

@@ -1,0 +1,22 @@
+---
+import GetStartedBtn from "./GetStartedBtn.astro"
+import priceHomeConfig from "../../../config/main-config.json"
+const priceHomeData = priceHomeConfig.priceHome[0];
+import "../../../../public/style/style.css"
+---
+
+<div class="price-demo-widget">
+    <h3>{priceHomeData.priceDemoWidget[0].subtitle}</h3>
+    <div class="demo-price-container">
+        <div class="demo-price">
+            <h3>{priceHomeData.priceDemoWidget[0].price}</h3>
+            <p>{priceHomeData.priceDemoWidget[0].descriptionPrice}</p>
+        </div>
+        <div class="demo-price-text">
+            <p>{priceHomeData.priceDemoWidget[0].description}</p>
+        </div>
+    </div>
+    <div class="price-demo-btn-container">
+        <GetStartedBtn/>
+    </div>
+</div>

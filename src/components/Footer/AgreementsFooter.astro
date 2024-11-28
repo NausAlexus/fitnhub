@@ -1,0 +1,14 @@
+---
+import footerConfig from "../../config/footer-config.json"
+const agreementsFooterData = footerConfig.agreementsFooter[0];
+import "../../../public/style/style.css"
+---
+
+<div class="agreements-footer-container">
+    <p class="agreements-footer-title">{agreementsFooterData.subtitle}</p>
+    <ul class="agreements-footer-items">
+        {agreementsFooterData.links.map(item => (
+            <li class="agreements-footer-item"><a class="agreements-footer-link" href={item.path}>{item.name}</a></li>
+        ))}
+    </ul>
+</div>

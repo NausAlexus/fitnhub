@@ -1,0 +1,33 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import ReturnToBlog from "../components/Main/Blog/ReturnToBlog.astro";
+import BuildingLastingConfig from "../config/main-config.json"
+import "../../public/style/style.css"
+---
+
+<Layout>
+  <div class="bulding-lasting-container">
+    <div class="bulding-lasting-wrapper">
+      <p class="bulding-lasting-title">{BuildingLastingConfig.buildingLasting[0].subtitle}</p>
+      <div class="bulding-lasting-block">
+        <div class="bulding-lasting-content">
+          <p class="bulding-lasting-text">
+            {BuildingLastingConfig.buildingLasting[0].description.split('\n').map(line => (
+                <span>
+                    {line}
+                    <br />
+                </span>
+            ))}
+          </p>
+          <a href={BuildingLastingConfig.buildingLasting[0].path}><ReturnToBlog />
+          </a>
+        </div>
+        <img
+          class="BuldingLastingImg"
+          src="/fitnhub/img/blog_img/Power.jpg"
+          alt="Mindful Mornings"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,12 @@
+---
+import StoriesHomeConfig from "../../../config/main-config.json"
+import "../../../../public/style/style.css"
+---
+
+<div class="stories-right-container">
+    <img class="strories-right-widget-img" src="/fitnhub/img/home_img/stories-img.svg" alt="Storis">
+    <div class="stories-right-item">
+        <h3 class="strories-right-widget-title">{StoriesHomeConfig.storiesHome[0].storiesRightWidget[0].subtitle}</h3>
+        <p class="strories-right-widget-text">{StoriesHomeConfig.storiesHome[0].storiesRightWidget[0].description}</p>
+    </div>
+</div>

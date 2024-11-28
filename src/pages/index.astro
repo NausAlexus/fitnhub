@@ -1,0 +1,19 @@
+---
+import HeroHome from "../components/Main/Home/HeroHome.astro"
+import Layout from "../Layouts/Layout.astro"
+import PlanHome from "../components/Main/Home/PlanHome.astro"
+import PriceHome from "../components/Main/Home/PriceHome.astro"
+import FAQCard from "../components/FAQCard.astro"
+import StoriesHome from "../components/Main/Home/StoriesHome.astro"
+import "../../public/style/style.css"
+---
+
+<Layout>
+    <div class="home-container">
+        <HeroHome />
+        <PlanHome/>
+        <PriceHome/>
+        <FAQCard/>
+        <StoriesHome/>
+    </div>
+</Layout>

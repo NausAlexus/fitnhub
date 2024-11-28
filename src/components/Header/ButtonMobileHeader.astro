@@ -1,0 +1,27 @@
+---
+import "../../../public/style/style.css"
+---
+
+<div class="burger" id="toggle-nav">
+  <span class="line-burger"></span>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggle-nav");
+    const navMenu = document.querySelector("nav ul");
+    const headerMobile = document.querySelector("header");
+    const burger = document.querySelector(".burger");
+
+    toggleButton.addEventListener("click", () => {
+      const isVisible = navMenu.classList.toggle("visible");
+      if (isVisible) {
+        headerMobile.classList.add("visable");
+        burger.classList.add("visable");
+      } else {
+        headerMobile.classList.remove("visable");
+        burger.classList.remove("visable");
+      }
+    });
+  });
+</script>

@@ -1,0 +1,15 @@
+---
+import FooterBlock from "./FooterBlock.astro";
+import footerConfig from "../../config/footer-config.json";
+import "../../../public/style/style.css"
+---
+
+<footer class="footer-container">
+	<div class="footer-content">
+		<FooterBlock />
+		<div class="footer-footer">
+			<a class="contact-link" href={footerConfig.footer[0].href} target="_blank">{footerConfig.footer[0].email}</a>
+			<p class="footer-reserved">{footerConfig.footer[0].reservedText}</p>
+		</div>
+	</div>
+</footer>

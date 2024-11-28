@@ -1,0 +1,88 @@
+{
+    "footer": [
+      {
+        "email": "support@fitnhub.co",
+        "href": "mailto:support@fitnhub.co?",
+        "reservedText": "2024 © All rights reserved"
+      }
+    ],
+    "pagesFooter": [
+        {
+            "subtitle": "Pages",
+            "links": [
+                {
+                    "name": "Home",
+                    "path": "/fitnhub/"
+                },
+                {
+                    "name": "About us",
+                    "path": "/fitnhub/about_us"
+                },
+                {
+                    "name": "Pricing",
+                    "path": "/fitnhub/pricing"
+                },
+                {
+                    "name": "FAQ",
+                    "path": "/fitnhub/FAQ"
+                }
+            ]
+        }
+    ],
+    "blogFooter": [
+        {
+            "subtitle": "Blog",
+            "links": [
+                {
+                    "name": "HIIT for Beginners",
+                    "path": "/fitnhub/MindfulMornings"
+                },
+                {
+                    "name": "5 HIIT Exercises",
+                    "path": "/fitnhub/NutritionEssentials"
+                },
+                {
+                "name": "HIIT Progress",
+                "path": "/fitnhub/BuildingLasting"
+                }
+            ]
+        }
+    ],
+    "agreementsFooter": [
+        {
+            "subtitle": "Agreements",
+            "links": [
+                {
+                    "name": "Refund policy",
+                    "path": "/fitnhub/refund_policy"
+                },
+                {
+                    "name": "Terms of use",
+                    "path": "/fitnhub/terms_of_use"
+                },
+                {
+                "name": "Privacy policy",
+                "path": "/fitnhub/privacy_policy"
+                }
+            ]
+        }
+    ],
+    "supportFooter": [
+        {
+            "email": [
+                {
+                  "name": "Support@domain.com",
+                  "href": "mailto:support@fitnhub.co?"
+                }
+            ]
+        },
+        {
+            "facebook": [
+                {
+                    "altImg": "FB-Logo",
+                    "href": "https://www.facebook.com/itrngcom/"
+                }
+            ]
+        }
+    ]
+  }

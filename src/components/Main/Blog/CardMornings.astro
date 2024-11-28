@@ -1,0 +1,12 @@
+---
+import ReadMoreBtn from "./ReadMoreBtn.astro";
+import CardMorningConfig from "../../../config/main-config.json"
+import "../../../../public/style/style.css"
+---
+
+<div class="card-mornings">
+	<img class="BlogMorningImg" src="/fitnhub/img/blog_img/morning.jpg" alt="Mindful Mornings" />
+	<p class="card-mornings_title">{CardMorningConfig.cardMornings[0].subtitle}</p>
+	<p class="card-mornings_text">{CardMorningConfig.cardMornings[0].description}</p>
+	<a class="card-mornings-link" href={CardMorningConfig.cardMornings[0].path}> <ReadMoreBtn /> </a>
+</div>

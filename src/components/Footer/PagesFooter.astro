@@ -1,0 +1,18 @@
+---
+import footerConfig from "../../config/footer-config.json";
+const pageFooterData = footerConfig.pagesFooter[0];
+import "../../../public/style/style.css"
+---
+
+<div class="pages-container">
+	<p class="pages-title">{pageFooterData.subtitle}</p>
+	<ul class="pages-items">
+		{
+			pageFooterData.links.map((item) => (
+				<li class="pages-item">
+					<a class="pages-link" href={item.path}>{item.name}</a>
+				</li>
+			))
+		}
+	</ul>
+</div>

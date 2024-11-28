@@ -1,0 +1,12 @@
+---
+import ReadMoreBtn from "./ReadMoreBtn.astro";
+import cardPowerConfig from "../../../config/main-config.json"
+import "../../../../public/style/style.css"
+---
+
+<div class="card-power">
+    <img class="BlogPowerImg" src="/fitnhub/img/blog_img/Power.jpg" alt="Power" />
+    <p class="card-power_title">{cardPowerConfig.cardPower[0].subtitle}</p>
+    <p class="card-power_text">{cardPowerConfig.cardPower[0].description}</p>
+    <a class="card-power-link" href={cardPowerConfig.cardPower[0].path}>  <ReadMoreBtn /></a>
+</div>

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Sitara-Bold;
+    src: url('/fitnhub/fonts/Sitara-Bold.ttf');
+}
+@font-face {
+    font-family: Sitara-BoldItalic;
+    src: url('/fitnhub/fonts/Sitara-BoldItalic.ttf');
+}
+@font-face {
+    font-family: Sitara-Italic;
+    src: url('/fitnhub/fonts/Sitara-Italic.ttf');
+}
+@font-face {
+    font-family: Sitara-Regular;
+    src: url('/fitnhub/fonts/Sitara-Regular.ttf');
+}

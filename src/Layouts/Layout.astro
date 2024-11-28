@@ -1,0 +1,26 @@
+---
+import '../../public/style/variables.css'
+import '../../public/style/fonts.css'
+import Header from "../components/Header/Header.astro"
+import Footer from '../components/Footer/Footer.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/fitnhub/ico.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Fitnhub</title>
+		<link rel="stylesheet" href="/fitnhub/style/style.css">
+	</head>
+	<body>
+		<div class="layout-container">
+		  <Header />
+		  <div class="main-content">
+			<slot />
+		  </div>
+		  <Footer />
+		</div>
+	  </body>
+</html>

@@ -1,0 +1,84 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import PrivacyPolicyConfig from "../config/main-config.json";
+const privacyData = PrivacyPolicyConfig.privacyPolicy[0].privaciText[0];
+import "../../public/style/style.css"
+---
+
+<Layout>
+  <div class="privacy-policy-container">
+    <h2>{PrivacyPolicyConfig.privacyPolicy[0].subtitle}</h2>
+    <div class="privacy-policy-text-container">
+      <p class="privacy-policy-title">
+        {PrivacyPolicyConfig.privacyPolicy[0].lastRevision}
+      </p>
+      <p class="privacy-policy-description">
+        {PrivacyPolicyConfig.privacyPolicy[0].description}
+      </p>
+      <ol>
+        {
+          privacyData &&
+            privacyData.sections &&
+            privacyData.sections.map((section) => (
+              <li>
+                {section.title}
+                <ul>
+                  {section.items &&
+                    section.items.map((item) => {
+                      if (typeof item === "string") {
+                        return <li>{item}</li>;
+                      } else if (item.title && item.items) {
+                        return (
+                          <li>
+                            {item.title}
+                            <ul>
+                              {item.items.map((subItem) => {
+                                if (typeof subItem === "string") {
+                                  return <li>{subItem}</li>;
+                                } else if (subItem.text && subItem.subItems) {
+                                  return (
+                                    <li>
+                                      {subItem.text}
+                                      {subItem.subItems &&
+                                        subItem.subItems.length > 0 && (
+                                          <ul>
+                                            {subItem.subItems.map(
+                                              (subSubItem) => (
+                                                <li>{subSubItem}</li>
+                                              )
+                                            )}
+                                          </ul>
+                                        )}
+                                    </li>
+                                  );
+                                }
+                                return null;
+                              })}
+                            </ul>
+                          </li>
+                        );
+                      } else if (item.text) {
+                        return (
+                          <li>
+                            {item.text}
+                            {item.subItems && item.subItems.length > 0 && (
+                              <ul>
+                                {item.subItems.map((subItem) => (
+                                  <li>{subItem}</li>
+                                ))}
+                              </ul>
+                            )}
+                          </li>
+                        );
+                      }
+                      return null;
+                    })}
+                </ul>
+              </li>
+            ))
+        }
+      </ol>
+      <p></p>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,14 @@
+---
+import footerConfig from "../../config/footer-config.json";
+const supportFooterData = footerConfig.supportFooter;
+const emailData = supportFooterData[0].email[0];
+const facebookData = supportFooterData[1].facebook[0];
+import "../../../public/style/style.css"
+---
+
+<div class="suport-footer-container">
+	<a class="suport-contact-link" href={emailData.href} target="_blank">{emailData.name}</a>
+	<a class="footer-fb-link" target="_blank" href={facebookData.href}>
+    	<img class="footer-fb-img" src="/fitnhub/img/home_img/logo-fb.svg" alt={facebookData.altImg} />
+  	</a>
+</div>

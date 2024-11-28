@@ -1,0 +1,14 @@
+---
+import StoriesHomeConfig from "../../../config/main-config.json"
+const StoriesLeftWidgetData = StoriesHomeConfig.storiesHome[0];
+import "../../../../public/style/style.css"
+---
+
+<div class="stories-left-container">
+    {StoriesLeftWidgetData.storiesLeftWidget.map(item => (
+        <div class="stories-left-item">
+            <h3 class="stories-left-title">{item.subtitle}</h3>
+            <p class="stories-left-text">{item.description}</p>
+        </div>
+    ))}
+</div>

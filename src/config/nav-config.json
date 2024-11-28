@@ -1,0 +1,35 @@
+{
+  "links": [
+    {
+      "name": "About us",
+      "path": "/fitnhub/about_us"
+    },
+    {
+      "name": "Blog",
+      "path": "/fitnhub/blog"
+    },
+    {
+      "name": "Pricing",
+      "path": "/fitnhub/pricing"
+    },
+    {
+      "name": "Refund policy",
+      "path": "/fitnhub/refund_policy"
+    },
+    {
+      "name": "Terms of use",
+      "path": "/fitnhub/terms_of_use"
+    },
+    {
+      "name": "Privacy policy",
+      "path": "/fitnhub/privacy_policy"
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Login",
+      "type": "button",
+      "action": "login"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+---
+import StoriesLeftWidget from "./StoriesLeftWidget.astro"
+import StoriesRightWidget from "./StoriesRightWidget.astro"
+import StoriesHomeConfig from "../../../config/main-config.json"
+import "../../../../public/style/style.css"
+---
+
+<div class="stories-home-container">
+    <h2 class="stories-home-title">{StoriesHomeConfig.storiesHome[0].subtitle}</h2>
+    <div class="stories-vidget-container">
+        <StoriesLeftWidget/>
+        <StoriesRightWidget/>
+    </div>
+</div>

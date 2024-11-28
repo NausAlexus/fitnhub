@@ -1,0 +1,7 @@
+---
+import priceHomeConfig from "../../../config/main-config.json"
+const priceHomeData = priceHomeConfig.priceHome[0];
+import "../../../../public/style/style.css"
+---
+
+<a class="get-home-btn-link" href={priceHomeData.priceDemoWidget[0].link}>{priceHomeData.priceDemoWidget[0].buttonText}</a>

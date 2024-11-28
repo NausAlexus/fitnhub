@@ -1,0 +1,27 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import aboutUsConfig from "../config/main-config.json";
+import AboutUsConfig from "../config/main-config.json"
+import "../../public/style/style.css"
+---
+
+<Layout>
+  <div class="about_us">
+    <img class="about_us_img" src="/fitnhub/img/about_img/ImgAbout.png" alt="About us" />
+    <div class="about_us_card">
+      <h2 class="about_us_card_title">{aboutUsConfig.aboutUs[0].subtitle}</h2>
+      <p class="about_us_card_text">
+        {
+          aboutUsConfig.aboutUs[0].description.split("\n").map((line) => (
+            <span>
+              {line}
+              <br />
+            </span>
+          ))
+        }
+      </p>
+      <a href={AboutUsConfig.aboutUs[0].path} class="about_us_btn">Start Your Journey</a>
+      <img class="about_us_img_mobile" src="/fitnhub/img/about_img/ImgAbout.png" alt="About us" />
+    </div>
+  </div>
+</Layout>

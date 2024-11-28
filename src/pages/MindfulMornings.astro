@@ -1,0 +1,32 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import ReturnToBlog from "../components/Main/Blog/ReturnToBlog.astro";
+import MindfulMorningsConfig from "../config/main-config.json"
+import "../../public/style/style.css"
+---
+
+<Layout>
+  <div class="mindful-mornings-container">
+    <div class="mindful-mornings">
+      <p class="mindful-mornings-title">{MindfulMorningsConfig.mindfulMornings[0].subtitle}</p>
+      <div class="mindful-mornings-block">
+        <div class="mindful-mornings-content">
+        	<p class="mindful-mornings-text">
+				{MindfulMorningsConfig.mindfulMornings[0].description.split('\n').map(line => (
+					<span>
+						{line}
+						<br />
+					</span>
+				))}
+        	</p>
+          <ReturnToBlog />
+        </div>
+        <img
+          class="MindfulMorningsImg"
+          src="/fitnhub/img/blog_img/morning.jpg"
+          alt="Mindful Mornings"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>
